@@ -10,6 +10,31 @@ body {
   background-position: left top;
   font-family: "Zilla Slab", serif;
 }
+.header_content {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.title {
+  margin-right: 150px;
+}
+
+.header_content a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  width: 100px;
+  /* height: 70px; */
+  margin: auto 0;
+  padding: 10px 15px;
+
+  background-color: blue;
+  text-align: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
 
 .box-container {
   width: 70%;
@@ -95,11 +120,6 @@ body {
 }
 .hidden {
   display: none;
-}
-.title {
-  text-align: center;
-  color: white;
-  margin: 20px 0;
 }
 
 .divider-container {
