@@ -47,6 +47,7 @@ const typeController = (e) => {
     display.innerHTML += `<span class="green">${newLetter === " " ? "▪" : newLetter}</span>`;
   } else {
     display.innerHTML += `<span class="red">${newLetter === " " ? "▪" : newLetter}</span>`;
+    errorCount += 1;
   }
 
   // check if given question text is equal to user typed text
@@ -80,6 +81,7 @@ const gameOver = () => {
   // make it inactive
   display.classList.add("inactive");
   // show result
+  // resultModal.classList.add();
   resultModal.innerHTML += `
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${timeTaken}</span> seconds</p>
@@ -94,11 +96,13 @@ const gameOver = () => {
   errorCount = 0;
   userText = "";
   display.classList.add("inactive");
+
 };
 
 const closeModal = () => {
   modalBackground.classList.toggle("hidden");
   resultModal.classList.toggle("hidden");
+  location.reload();
 };
 
 const start = () => {
